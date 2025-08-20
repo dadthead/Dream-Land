@@ -2,7 +2,6 @@
 // FourPillars.jsx
 import React from "react";
 import assets from "../../../assets/assets";
-
 const pillars = [
   {
     title: "PRIME LOCATION",
@@ -28,7 +27,7 @@ const pillars = [
 
 const FourPillars = () => {
   return (
-    <section className="bg-white text-white py-16 px-6 md:px-20">
+    <section className=" text-white py-16 px-6 md:px-20">
       {/* Heading */}
       <div className="text-center mb-12">
         <h2 className="text-[#ff6600] text-lg font-semibold uppercase tracking-widest">
@@ -40,8 +39,8 @@ const FourPillars = () => {
           entity in the industry. Our promise mirrors the commitment to becoming the
           very foundation upon which happiness is built.
         </p>
-        <h1 className="text-5xl md:text-6xl font-extrabold mt-10 text-[#ff6600]">
-          THE 4 PILLARS
+        <h1 className="text-5xl md:text-4xl uppercase font-semibold mt-10 text-[#ff6600]">
+          Our Foundation
         </h1>
       </div>
 

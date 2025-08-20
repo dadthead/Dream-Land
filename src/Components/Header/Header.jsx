@@ -8,16 +8,16 @@ const Header = () => {
     const [open, setOpen] = useState(false);
 
     return (
-        <header className="relative w-full md:px-30 text-white bg-img">
+        <header className=" w-full  text-[#ff6600] bg-[#310802] ">
 
-            <div className="flex justify-between items-center px-6 md:px-12 py-4">
+            <div className="flex justify-between items-center px-6  py-4">
                 {/* Logo */}
                 <Link to="/" className="flex items-center gap-5 px-0 md:px-20">
                     <motion.img
                         initial={{ opacity: 0, y: -50 }}
                         animate={{ opacity: 1, y: 1 }}
                         transition={{ duration: 1.5 }}
-                    src={assets.DlLogo} alt="logo" className="w-14 h-10  md:w-20 md:h-20" />
+                    src={assets.DlLogo} alt="logo" className="w-full h-10  md:w-full md:h-20" />
                 </Link>
 
 
@@ -31,7 +31,7 @@ const Header = () => {
                     className="flex items-center gap-5 uppercase font-bold text-lg"
                 >
                     <span>Menu</span>
-                    <Menu className="w-6 h-6  text-white " />
+                    <Menu className="w-6 h-6  text-[#ff6600] " />
                 </motion.button>
             </div>
 

@@ -10,6 +10,7 @@ import Gallery from './Pages/Gallery'
 import Ourprojects from './Pages/Ourprojects'
 import Careers from './Pages/Careers'
 import Header from './Components/Header/Header'
+import Footer from './Components/Footer/Footer'
 
 
 
@@ -31,6 +32,8 @@ function App() {
     <Route path='/ourprojects' element={ <Ourprojects/> }/>
   
   </Routes> 
+
+  <Footer/>
   </div>    
     
   )
