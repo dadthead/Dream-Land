@@ -101,7 +101,7 @@ export default function FeaturedProjects() {
     const projects = PROJECTS[topTab][subTab] || [];
 
     return (
-        <div className="w-full h-screen fp_1">
+        <div className="w-full h-screen bg-gradient-to-b from-[#000000] to-[#a01d23]">
 
         <section className=" text-[#a01d23]  gap-9 px-4 md:px-12 lg:px-40">
             <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">
