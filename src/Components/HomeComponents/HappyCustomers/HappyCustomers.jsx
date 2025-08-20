@@ -49,8 +49,6 @@ const testimonials = [
   const { text, author, role, rating } = testimonials[current];
 
   return (
-    <div className="h-screen">
-
     <section className="happy-customers  text-[#ff6600] py-16 px-6 flex flex-col items-center justify-start  cursor-grab z-50 ">
         <div className="flex flex-col items-start justify-start md:relative md:left-[-270px]">
 
@@ -94,7 +92,6 @@ const testimonials = [
         VIEW ALL
       </button>
     </section>
-          </div>
   );
 }
 
