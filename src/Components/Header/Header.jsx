@@ -17,7 +17,7 @@ const Header = () => {
                         initial={{ opacity: 0, y: -50 }}
                         animate={{ opacity: 1, y: 1 }}
                         transition={{ duration: 1.5 }}
-                    src={assets.DlLogo} alt="logo" className="w-full h-10  md:w-full md:h-20" />
+                    src={assets.DlLogo} alt="logo" className="w-full h-6  md:w-full md:h-15" />
                 </Link>
 
 
