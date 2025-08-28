@@ -1,55 +1,64 @@
 import React from "react";
 import "./Introduce.css";
 import { motion } from "framer-motion";
-import PillarGrid from "./PillarGrid";
-
+import assets from "../../../assets/assets";
 
 const Introduce = React.memo(() => {
   return (
-    <div className="bg-[#55191c] text-amber-50 min-h-screen px-6 py-10 md:px-12 lg:px-10">
-      {/* Intro Section */}
-      <div className="max-w-screen-xl mx-auto">
-        <h2 className="text-2xl md:text-3xl mb-4 font-semibold uppercase">
+    <div
+      className="introduce-section h-[600px] md:h-[500px] sm:h-[400px] text-white overflow-hidden relative">
+ <video
+    autoPlay
+    loop
+    muted
+    playsInline
+    className="fixed inset-0 w-full h-full object-cover -z-10 overflow-hidden"
+  >
+    <source src={assets.v2} type="video/mp4" />
+  </video>    
+  
+  
+  
+  
+    <div className="absolute top-0 left-0 w-full -z-10 bg-black/80 h-full"></div>
+      <div className="max-w-screen-xl mx-auto z-50">
+        <motion.h2 
+          initial={{ opacity: 0,  y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="text-2xl md:text-4xl md:mb-2 font-semibold poppins uppercase text-center py-9  ">
           Introducing DreamLand
-        </h2>
-        <div className="space-y-3">
-          <p>
-            With three decades of legacy, DreamLand’s unique customer-centric
-            approach and commitment to delivering excellence and superior
-            products have earned the company-wide recognition as a credible and
-            reliable entity in the industry, across Vijayawada and Hyderabad.
-            The brand promise of “Foundation of Happiness” mirrors the group's
-            commitment to becoming the very foundation upon which happiness is
-            built.
-          </p>
-          <p>
+        </motion.h2>
+
+        <div className="space-y-4 p-6 rounded-xl z-10  font-light ">
+          < motion.p
+            initial={{ opacity: 0,  y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            Dream Land Projects, founded in 2005 by Mr. Koteswara Rao, is a true story of passion turning into purpose. Starting with zero resources but an unshakable vision, he built the company on trust, knowledge, and dedication. With over 20 years of experience in the real estate industry, Mr. Rao’s deep understanding of venture pricing, smart real estate investments, and creative opportunities like farm lands and red sandalwood plantations has helped thousands of families and investors fulfill their dreams. Today, Dream Land Projects stands as a symbol of integrity, growth, and prosperity — where every venture is not just an investment, but a step toward a better future.
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0,  y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+          >
             With over 52+ projects delivered, spanning over 12 million square
             feet, and up to 40 million square feet in the pipeline, Sumadhura
             has emerged as a prominent brand in the fast-evolving market of
             developers.
-          </p>
+          </motion.p>
+        
         </div>
       </div>
 
-      {/* Pillars Title */}
-      <div className="flex items-center justify-center mt-10">
-        <motion.h1 
-        initial={{ opacity: 0, y: 100 }}
-        whileInView={{ opacity: 1 , y: 0 }}
-        viewport={{ once: true , amount: 0.8 }}
-        transition={{ duration: 1.9, delay: 0.5 }}
-        className="pillar-text text-3xl md:text-4xl font-bold text-center">
-          THE 4 PILLARS
-        </motion.h1>
-      </div>
       <div className="hidden md:block">
-
-      <div className="w-20 h-0.5 mx-auto bg-amber-50 relative left-[-50%]">
+        <div className="w-20 h-0.5 mx-auto bg-amber-50 relative left-[-50%]"></div>
+        <div className="w-4 h-4 relative bottom-2 left-[-47%] mx-auto rounded-full bg-amber-50"></div>
       </div>
-      <div className="w-4 h-4 relative  bottom-2 left-[-47%] mx-auto rounded-full bg-amber-50"></div>
-      </div>
-    <PillarGrid/> 
-   
     </div>
   );
 });

@@ -34,10 +34,7 @@ const FourPillars = () => {
           Introducing DreamLand
         </h2>
         <p className="mt-4 max-w-4xl mx-auto text-gray-300 leading-relaxed">
-          With decades of legacy, DreamLand’s unique customer-centric approach and
-          commitment to delivering excellence have earned recognition as a reliable
-          entity in the industry. Our promise mirrors the commitment to becoming the
-          very foundation upon which happiness is built.
+          Dream Land Projects, founded in 2005 by Mr. Koteswara Rao, is a true story of passion turning into purpose. Starting with zero resources but an unshakable vision, he built the company on trust, knowledge, and dedication. With over 20 years of experience in the real estate industry, Mr. Rao’s deep understanding of venture pricing, smart real estate investments, and creative opportunities like farm lands and red sandalwood plantations has helped thousands of families and investors fulfill their dreams. Today, Dream Land Projects stands as a symbol of integrity, growth, and prosperity — where every venture is not just an investment, but a step toward a better future.
         </p>
         <h1 className="text-5xl md:text-4xl uppercase font-semibold mt-10 text-[#ff6600]">
           Our Foundation

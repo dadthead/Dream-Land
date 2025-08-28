@@ -8,16 +8,16 @@ const Header = () => {
     const [open, setOpen] = useState(false);
 
     return (
-        <header className=" w-full  text-[#ff6600] bg-[#310802] ">
+        <header className="absolute w-full  text-white  bg-transparent top-0 left-0 z-50">
 
             <div className="flex justify-between items-center px-6  py-4">
                 {/* Logo */}
-                <Link to="/" className="flex items-center gap-5 px-0 md:px-20">
+                <Link to="/" className="flex items-center gap-5  md:px-8">
                     <motion.img
                         initial={{ opacity: 0, y: -50 }}
                         animate={{ opacity: 1, y: 1 }}
                         transition={{ duration: 1.5 }}
-                    src={assets.DlLogo} alt="logo" className="w-full h-6  md:w-full md:h-15" />
+                    src={assets.DlLogo} alt="logo" className="w-full h-8  md:w-full md:h-14 sm:w-full sm:h-12" />
                 </Link>
 
 
@@ -28,10 +28,15 @@ const Header = () => {
                     transition={{ duration: 1.5 }}
 
                     onClick={() => setOpen(true)}
-                    className="flex items-center gap-5 uppercase font-bold text-lg"
-                >
-                    <span>Menu</span>
-                    <Menu className="w-6 h-6  text-[#ff6600] " />
+                    className="flex items-center gap-5 uppercase font-bold text-lg cursor-pointer" >
+                    <span className="text-gray-300 hover:text-amamber-800 poppins">Menu</span>
+                    
+                    <div className="flex flex-col gap-1">
+
+                        <span className="w-7  h-1 bg-white hover:bg-amber-900"></span>
+                        <span className="w-5  h-1 bg-white hover:bg-amber-900"></span>
+                        <span className="w-7  h-1 bg-white hover:bg-amber-900"></span>
+                    </div>
                 </motion.button>
             </div>
 
@@ -48,7 +53,7 @@ const Header = () => {
                 </div>
 
                 {/* Nav Links */}
-                <ul className="flex flex-col gap-6 px-8 mt-8 uppercase font-semibold text-lg">
+                <ul className="flex flex-col gap-6 text-[#a01d23]/70 px-8 mt-8 uppercase font-semibold text-lg">
                     <NavLink to="/" onClick={() => setOpen(false)}>
                         <li className="hover:text-[#a01d23] cursor-pointer">Home</li>
                     </NavLink>

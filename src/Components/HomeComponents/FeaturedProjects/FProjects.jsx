@@ -6,14 +6,15 @@ import "swiper/css";
 import "swiper/css/navigation";
 import assets from "../../../assets/assets";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { motion } from "framer-motion";
 
-export default function FeaturedProjects() {
-    const [topTab, setTopTab] = useState("Residential");
-    const [subTab, setSubTab] = useState("Apartment");
+const FeaturedProjects=React.memo(()=>{
+    const [topTab, setTopTab] = useState("RealEstate");
+    const [subTab, setSubTab] = useState("All");
 
     const PROJECTS = {
-        Residential: {
-            Apartment: [
+        RealEstate: {
+            All: [
                 {
                     title: "Folium by Sumadhura",
                     location: "Whitefield, Bengaluru",
@@ -47,18 +48,18 @@ export default function FeaturedProjects() {
                     image: assets.apt4,
                 },
             ],
-            Villas: [
-                {
-                    title: "Pebble County",
-                    location: "Devanahalli, Bengaluru",
-                    config: "4 & 5 BHK Villas",
-                    possession: "Mar 2027",
-                    rera: "PRM/KA/1234/5678",
-                    image: assets.apt1,
-                },
-            ],
+            // Villas: [
+            //     {
+            //         title: "Pebble County",
+            //         location: "Devanahalli, Bengaluru",
+            //         config: "4 & 5 BHK Villas",
+            //         possession: "Mar 2027",
+            //         rera: "PRM/KA/1234/5678",
+            //         image: assets.apt1,
+            //     },
+            // ],
         },
-        Commercial: {
+        FarmLands: {
             All: [
                 {
                     title: "Sumadhura Business Park",
@@ -70,7 +71,7 @@ export default function FeaturedProjects() {
                 },
             ],
         },
-        "Plotted Development": {
+        "Open Plots": {
             All: [
                 {
                     title: "Verdant Enclave",
@@ -82,7 +83,7 @@ export default function FeaturedProjects() {
                 },
             ],
         },
-        "Logistics Warehousing": {
+        "Construction": {
             All: [
                 {
                     title: "LogiHub West",
@@ -101,121 +102,132 @@ export default function FeaturedProjects() {
     const projects = PROJECTS[topTab][subTab] || [];
 
     return (
-        <div className="w-full h-screen bg-gradient-to-b from-[#000000] to-[#a01d23]">
+        <div className="w-full h-full bg-gradient-to-b from-black to-green-900   ">
 
-        <section className=" text-[#a01d23]  gap-9 px-4 md:px-12 lg:px-40">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">
-                FEATURED PROJECTS
-            </h2>
-
-
-
-            <div className="md:flex md:flex-wrap grid-cols-2 grid  gap-1 mb-6 justify-center">
-                {topTabs.map((t) => (
-                    <button
-                    key={t}
-                    onClick={() => {
-                        setTopTab(t);
-                        setSubTab(Object.keys(PROJECTS[t])[0]);
-                    }}
-                    className={`px-6 py-2 transition text-md font-semibold text-center 
-                        ${topTab === t
-                            ? "bg-[#ff6600] text-white"
-                            : "bg-[#a01d23] text-white hover:bg-[#ff6600]"}
-                            `}
-                            >
-                        {t}
-                    </button>
-                ))}
-            </div>
+            <section className=" text-white  gap-9 px-4 py-4  md:px-2 lg:px-30">
+                <motion.h2
+                
+                 initial={{ opacity: 0,  y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.5, delay: 0.2 }} className="text-lg sm:text-xl md:text-2xl font-semibold mb-6 text-left">
+                    FEATURED PROJECTS
+                </motion.h2>
 
 
-            {/* Sub Tabs + Navigation */}
-            <div className="flex flex-wrap justify-between items-center border-b border-[#a01d23]/30 mb-6 ">
-                <div className="flex gap-6 flex-wrap">
-                    {subTabs.map((s) => (
-                        <button
-                        key={s}
-                        onClick={() => setSubTab(s)}
-                        className={`py-2 relative text-md md:text-base ${subTab === s
-                            ? "text-[#a01d23] font-semibold"
-                            : "text-[#a01d23]   "
-                        }`}
-                        >
-                            {s}
-                            {subTab === s && (
-                                <span className="absolute left-0 -bottom-[1px] h-[2px] w-full bg-[#a01d23]/70" />
-                            )}
-                        </button>
+
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:flex gap-2 md:gap-[1px]  mb-6 justify-center ">
+                    {topTabs.map((t) => (
+                        < motion.button
+              initial={{ opacity: 0,  y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+                            key={t}
+                            onClick={() => {
+                                setTopTab(t);
+                                setSubTab(Object.keys(PROJECTS[t])[0]);
+                            }}
+                            className={`px-4 py-2 cursor-pointer md:px-10 lg:px-26 transition text-xs sm:text-sm md:text-base lg:text-[12px] text-center border border-orange-500 
+                            ${topTab === t
+                                    ? "bg-slate-300 text-green-900 "
+                                    : "bg-white text-[#a01d23] "}`} >
+                            {t}
+                        </motion.button>
                     ))}
-
-                </div>
-
-                <div className="flex gap-1 mt-3 md:mt-0">
-                    <div className="custom-prev bg-[#a01d23] text-white w-9 h-9 flex items-center justify-center hover:bg-[#8a171c] transition cursor-pointer">
-                        <ChevronLeft size={20} />
-                    </div>
-                    <div className="custom-next bg-[#a01d23] text-white w-9 h-9 flex items-center justify-center border-l border-[#a01d23]/30 hover:bg-[#8a171c] transition cursor-pointer">
-                        <ChevronRight size={20} />
-                    </div>
                 </div>
 
 
-            </div>
 
-            <Swiper
-                modules={[Navigation]}
-                navigation={{
-                    nextEl: ".custom-next",
-                    prevEl: ".custom-prev",
-                }}
-                loop={projects.length > 0}
-                watchOverflow={false}
-                spaceBetween={20}
-                breakpoints={{
-                    768: { slidesPerView: 2 },
-                    1024: {
-                        slidesPerView: 3
-                        
-                    },
-                }}
-                className="pb-10"
+                {/* Sub Tabs + Navigation */}
+                <div className="flex flex-wrap justify-between items-center border-b  border-white mb-3 ">
+                    <div className="flex gap-6 flex-wrap">
+                        {subTabs.map((s) => (
+                            <button
+                                key={s}
+                                onClick={() => setSubTab(s)}
+                                className={`py-2 relative text-md md:text-base mb-2 ${subTab === s
+                                    ? "text-white font-semibold"
+                                    : "text-white hover:text-orange-400"
+                                    }`}
+                            >
+                                {s}
+                                {subTab === s && (
+                                    <span className="absolute left-0 -bottom-[1px] h-[2px] w-full bg-orange-400/70" />
+                                )}
+                            </button>
+                        ))}
+
+                    </div>
+
+                    <div className="flex gap-1 mt-3 md:mt-0">
+                        <div className="custom-prev bg-orange-400 text-white w-9 h-9 flex items-center justify-center hover:bg-[#8a171c] transition cursor-pointer">
+                            <ChevronLeft size={20} />
+                        </div>
+                        <div className="custom-next bg-orange-400 text-white w-9 h-9 flex items-center justify-center border-l border-[#a01d23]/30 hover:bg-[#8a171c] transition cursor-pointer">
+                            <ChevronRight size={20} />
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <Swiper 
+                    modules={[Navigation]}
+                    navigation={{
+                        nextEl: ".custom-next",
+                        prevEl: ".custom-prev",
+                    }}
+                    loop={projects.length > 0}
+                    watchOverflow={false}
+                    spaceBetween={30}
+                    breakpoints={{
+                        768: { slidesPerView: 2 },
+                        1024: {
+                            slidesPerView: 3
+
+                        },
+                    }}
+                    className="pb-10"
                 >
 
 
-                {projects.map((p, i) => (
-                    <SwiperSlide key={i}>
-                        <div className="bg-white text-[#a01d23]  md:shadow-md shadow-amber-700 overflow-hidden hover:shadow-lg transition flex flex-col h-full">
+                    {projects.map((p, i) => (
+                        <SwiperSlide key={i}>
+                            <div className="bg-slate-100 rounded-t-full  overflow-hidden rounded-md transition flex flex-col h-full border-1">
 
-                            {/* Fixed height image wrapper */}
-                            <div className="w-full  h-100 overflow-hidden">
-                                <img
-                                    src={p.image}
-                                    alt={p.title}
-                                    className="w-full h-full  object-cover"
+                                {/* Fixed height image wrapper */}
+                                <div className="w-full  h-100 overflow-hidden px-3 py-3 rounded-md ">
+                                    <img
+                                        src={p.image}
+                                        alt={p.title}
+                                        className="w-full h-full  object-cover rounded-t-full"
+                                        loading="lazy"
                                     />
+                                </div>
+
+                                <div className="p-4 flex flex-col flex-grow">
+                                    <h3 className="text-lg text-black font-semibold">{p.title}</h3>
+                                    <p className="text-black">{p.location}</p>
+                                    <p className="text-sm mt-2 text-slate-600">{p.config}</p>
+                                    <p className="text-sm text-slate-600">Possession: {p.possession}</p>
+                                    <p className="text-xs text-slate-400">RERA: {p.rera}</p>
+                                    <button className="mt-3 w-40 bg-orange-400 text-white px-4 py-2 cursor-pointer  hover:bg-[#ff6600] transition">
+                                        View Details →
+                                    </button>
+                                </div>
                             </div>
+                        </SwiperSlide>
+                    ))}
 
-                            <div className="p-4 flex flex-col flex-grow">
-                                <h3 className="text-lg font-semibold">{p.title}</h3>
-                                <p className="text-[#ff6600]">{p.location}</p>
-                                <p className="text-sm mt-2">{p.config}</p>
-                                <p className="text-sm">Possession: {p.possession}</p>
-                                <p className="text-xs text-[#ff6600]">RERA: {p.rera}</p>
-                                <button className="mt-3 w-40 bg-[#a01d23] text-white px-4 py-2  hover:text-[#a01d23] transition">
-                                    View Details →
-                                </button>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                ))}
+                </Swiper>
+                {projects.length > 0 ? null : (
+                    <p className="text-center text-gray-500">No projects available.</p>
+                )}
 
-            </Swiper>
-            {projects.length > 0 ? null : (
-                <p className="text-center text-gray-500">No projects available.</p>
-            )}
-
-        </section>
-                                    </div>
+            </section>
+        </div>
     );
-}
+})
+
+export default FeaturedProjects

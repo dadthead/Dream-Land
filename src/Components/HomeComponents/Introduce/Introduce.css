@@ -36,3 +36,19 @@
   }
 }
 
+.bgt{
+  background: url("../../../assets/text.jpg") center center no-repeat;
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.introduce-section {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center ;
+  background-repeat: no-repeat;
+
+}

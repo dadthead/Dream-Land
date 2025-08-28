@@ -1,20 +1,29 @@
 
 import React from "react";
+import assets from "../../../assets/assets";
+import { motion } from "framer-motion";
 
-const Boxes = () => {
+
+const Boxes = React.memo(() => {
   return (
-    <div className="w-full h-auto py-4 flex justify-center items-center">
+    <div className="w-full h-auto  flex justify-center items-center bg-cover  " style={{ backgroundImage:`url(${assets.img1})`}}>
 
-    <div className="grid grid-cols-3  sm:grid-cols-4 md:grid-cols-5 md:w-full md:h-130   grid-rows-2 w-full h-[400px] cursor-pointer gap-2">
+    <motion.div
+    initial={{ opacity: 0,  x: -100 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    viewport={{ once: true, amount: 0.5 }}
+    transition={{ duration: 1.5 }}
+    
+    className="grid grid-cols-3   sm:grid-cols-4 md:grid-cols-5 md:w-full md:h-130   grid-rows-2 w-full h-[400px] cursor-pointer ">
       {/* Box 1 */}
-      <div className="box-container hidden md:block ">
+      <div className="box-container hidden md:block  ">
         <div className="box-inner">
           {/* Front */}
-          <div className="box-front bg-gray-400 text-gray-700 font-semibold text-lg">
+          <div className="box-front bg-black/80 text-black font-semibold text-lg">
            
           </div>
           {/* Back */}
-          <div className="box-back bg-[#a01d23]/30 text-white font-bold text-lg">
+          <div className="box-back bg-black/85 text-black font-bold text-lg">
             
           </div>
         </div>
@@ -23,10 +32,10 @@ const Boxes = () => {
       {/* Box 2 */}
       <div className="box-container">
         <div className="box-inner">
-          <div className="box-front relative flex items-center justify-center text-slate-700 font-bold text-xl bg-amber-100">
+          <div className="box-front relative flex items-center justify-center text-white font-bold text-xl bg-black/95">
             Happiness
           </div>
-          <div className="box-back bg-slate-700 text-white  font-semibold px-3 text-lg">
+          <div className="box-back bg-black/75 text-white  font-semibold px-3 text-lg">
              Our Principles are <br/>
             Built on Layimg <br/>
             Happiness
@@ -37,10 +46,10 @@ const Boxes = () => {
       {/* Box 3 */}
       <div className="box-container">
         <div className="box-inner">
-          <div className="box-front text-4xl bg-gray-400 text-white font-medium text-center px-3 flex items-center justify-center">
+          <div className="box-front text-4xl bg-black/80 text-white font-medium text-center px-3 flex items-center justify-center">
             40
           </div>
-          <div className="box-back bg-[#ff6600]/30 text-white px-4 font-semibold text-lg flex items-center justify-center">
+          <div className="box-back bg-black/80 text-white px-4 font-semibold text-lg flex items-center justify-center">
             Million Saft Developing 
           </div>
         </div>
@@ -49,9 +58,9 @@ const Boxes = () => {
       {/* Box 4 */}
       <div className="box-container">
         <div className="box-inner">
-          <div className="box-front text-xl text-slate-700 font-bold bg-amber-100"> Decades</div>
-          <div className="box-back bg-[#a01d23]/80 text-white font-semibold text-lg px-4 flex items-center justify-center">
-           Decades of Happiness
+          <div className="box-front text-xl text-white font-bold bg-orange-400"> 20 Years</div>
+          <div className="box-back bg-orange-400 text-white font-semibold text-lg px-4 flex items-center justify-center">
+           2 Decades of Happiness
           </div>
         </div>
       </div>
@@ -59,10 +68,10 @@ const Boxes = () => {
       {/* Box 5 */}
       <div className="box-container hidden md:block ">
         <div className="box-inner">
-          <div className="box-front relative flex items-center justify-center text-white font-bold text-3xl bg-gray-400">
+          <div className="box-front relative flex items-center justify-center text-white font-bold text-3xl bg-black/70">
             
           </div>
-          <div className="box-back bg-[#a01d23]/30  text-white font-semibold text-lg flex items-center justify-center">
+          <div className="box-back bg-black/70  text-white font-semibold text-lg flex items-center justify-center">
             
           </div>
         </div>
@@ -71,15 +80,15 @@ const Boxes = () => {
       {/* second line  Boxs */}
       <div className="box-container hidden md:block ">
         <div className="box-inner">
-          <div className="box-front  bg-white text-white font-bold text-3xl flex items-center justify-center"></div>
-          <div className="box-back bg-[#a01d23]/30 text-white font-semibold text-lg flex items-center justify-center"></div>
+          <div className="box-front  bg-black/60 text-white font-bold text-3xl flex items-center justify-center"></div>
+          <div className="box-back bg-black/60 text-white font-semibold text-lg flex items-center justify-center"></div>
         </div>
       </div>
 
       <div className="box-container">
         <div className="box-inner">
-          <div className="box-front text-4xl font-semibold bg-amber-100"> 12K+</div>
-          <div className="box-back bg-white text-white font-semibold text-lg flex items-center justify-center">
+          <div className="box-front text-4xl font-semibold bg-black/80  shadow-black text-white"> 12K+</div>
+          <div className="box-back bg-black/80 text-white font-semibold text-lg flex items-center justify-center">
             Happy Clinets
           </div>
         </div>
@@ -87,8 +96,8 @@ const Boxes = () => {
 
       <div className="box-container">
         <div className="box-inner">
-          <div className="box-front bg-amber-100 text-4xl text-slate-700 font-semibold"> 12 </div>
-          <div className="box-back bg-[#a01d23]/80 text-white px-4 font-semibold text-lg flex items-center justify-center">
+          <div className="box-front bg-orange-400 text-4xl text-white font-semibold"> 12 </div>
+          <div className="box-back bg-orange-400 text-white px-4 font-semibold text-lg flex items-center justify-center">
             Million Sqft Delivered
           </div>
         </div>
@@ -96,8 +105,8 @@ const Boxes = () => {
 
       <div className="box-container">
         <div className="box-inner">
-          <div className="box-front text-4xl text-slate-700  font-semibold bg-amber-100"> 22K+ </div>
-          <div className="box-back bg-[#a01d23]/50 text-white font-semibold text-lg flex items-center justify-center">
+          <div className="box-front text-4xl text-white  font-semibold bg-black/80"> 22K+ </div>
+          <div className="box-back bg-black/50 text-white font-semibold text-lg flex items-center justify-center">
             Happy Familes
           </div>
         </div>
@@ -105,13 +114,13 @@ const Boxes = () => {
 
       <div className="box-container ">
         <div className="box-inner">
-          <div className="box-front bg-white"></div>
-          <div className="box-back bg-[#a01d23]/30 text-white font-semibold text-lg flex items-center justify-center"></div>
+          <div className="box-front bg-black/60  shadow-black text-white font-bold text-3xl flex items-center justify-center"></div>
+          <div className="box-back bg-black/60 text-white font-semibold text-lg flex items-center justify-center"></div>
         </div>
       </div>
-    </div>
+    </motion.div>
     </div>
   );
-};
+});
 
 export default Boxes;

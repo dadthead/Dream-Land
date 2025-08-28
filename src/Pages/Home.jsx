@@ -1,10 +1,10 @@
 import React from 'react'
 import Herosection from '../Components/HomeComponents/HeroSection/Herosection'
 import Introduce from '../Components/HomeComponents/Introduce/Introduce'
-import Introducing from '../Components/HomeComponents/IntroducingSection/Introducing'
 import FProjects from '../Components/HomeComponents/FeaturedProjects/FProjects'
 import Routatingbox from '../Components/HomeComponents/RoutatingBox/Routatingbox'
 import HappyCustomers from '../Components/HomeComponents/HappyCustomers/HappyCustomers'
+import FieldOfWorks from '../Components/HomeComponents/FieldsOfWorks/FieldOfWorks'
 
 const Home = () => {
   return (
@@ -12,10 +12,11 @@ const Home = () => {
       
     <Herosection/>
     <Introduce/>
-    <Introducing/>
+    <FieldOfWorks/>
     <FProjects/>
     <Routatingbox/>
     <HappyCustomers/>
+    
     </div>
   )
 }

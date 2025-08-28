@@ -1,5 +1,6 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import {motion, AnimatePresence} from 'framer-motion'
 
 const testimonials = [
   {
@@ -30,10 +31,10 @@ const testimonials = [
     role: " Bank Officials",
     rating: 5,
   },
-  
+
 ];
 
- function Testimonial() {
+const Testimonial=React.memo(()=> {
   const [current, setCurrent] = useState(0);
 
   const nextSlide = () => {
@@ -41,23 +42,38 @@ const testimonials = [
   };
 
   const prevSlide = () => {
-    setCurrent((prev) =>
-      prev === 0 ? testimonials.length - 1 : prev - 1
+    setCurrent((prev) => prev === 0 ? testimonials.length - 1 : prev - 1
     );
   };
 
   const { text, author, role, rating } = testimonials[current];
 
   return (
-    <section className="happy-customers  text-[#ff6600] py-16 px-6 flex flex-col items-center justify-start  cursor-grab z-50 ">
-        <div className="flex flex-col items-start justify-start md:relative md:left-[-270px]">
 
-      <p className="text-sm  uppercase tracking-wide text-start mb-2">Hear from our</p>
-      <h2 className="text-2xl font-semibold mb-2 ">HAPPY CUSTOMERS</h2>
-        </div>
+    <section className="bg-white  w-full  text-black py-16 px-6 flex flex-col lg:px-10 items-center  cursor-grab z-50 ">
+      <motion.div
+      
+      initial={{opacity:0 , x:100}} whileInView={{opacity:1 , x:0}}  viewport={{once:true , amount:0.5}} 
+        transition={{duration:1}}
+        className=" relative lg:right-80 md:right-40 right-0 sm:right-20">
 
-      <div className="max-w-3xl ">
-        <p className=" leading-relaxed mb-4 italic ">"{text}"</p>
+        <p 
+        className="text-[12px] mb-2">Hear from our</p>
+        <h2 className="text-xl font-medium mb-2 ">HAPPY CUSTOMERS</h2>
+      </motion.div>
+
+      <div className="max-w-4xl min-h-[200px] ">
+        <AnimatePresence mode="wait">
+          <motion.div 
+          key={current}
+          initial={{opacity:0 , x:-100}}
+          whileInView={{opacity:1 , x:0}}
+          viewport={{once:true , amount:0.5}}
+          transition={{duration:1}} 
+          >
+
+
+        <motion.p initial={{opacity:0 , y:100}} whileInView={{opacity:1 , y:0}} viewport={{once:true , amount:0.5}} className=" leading-relaxed mb-4  text-[12px] ">"{text}"</motion.p>
 
         {/* Stars */}
         <div className="flex justify-start mb-2">
@@ -66,33 +82,35 @@ const testimonials = [
           ))}
         </div>
 
-        <p className="font-semibold  ">
+        <p className="font-medium text-[12px]  ">
           {author}, {role}
         </p>
+          </motion.div>
+          </AnimatePresence>
       </div>
 
       {/* Previous & Next Buttons*/}
-      <div className="flex  gap-3 mt-8 md:relative md:left-[300px] mb-5">
+      <div className="flex  gap-3  md:relative md:left-[300px]">
         <button
           onClick={prevSlide}
-          className="bg-[#f17c2e] hover:bg-[#f6985a] text-white  p-2  cursor-pointer "
+          className="bg-[#f17c2e] hover:bg-[#f6985a] text-white  p-1  cursor-pointer "
         >
           <ChevronLeft size={20} />
         </button>
         <button
           onClick={nextSlide}
-          className="bg-[#f17c2e] hover:bg-[#f6985a] text-white p-2   cursor-pointer"
+          className="bg-[#f17c2e] hover:bg-[#f6985a] text-white p-1   cursor-pointer"
         >
           <ChevronRight size={20} />
         </button>
       </div>
 
       {/* View All */}
-      <button className=" bg-[#f17c2e]  text-white px-6 py-2 text-sm font-semibold  cursor-pointer border-2 border-transparent  hover:bg-[#f6985a]  transition-all duration-300">
+      <button className=" bg-[#f17c2e] mt-3  text-white px-4 py-[5px] text-[12px] font-small  cursor-pointer border-2 border-transparent  hover:bg-[#f6985a]  transition-all duration-300">
         VIEW ALL
       </button>
     </section>
   );
-}
+})
 
 export default Testimonial
