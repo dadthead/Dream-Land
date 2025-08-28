@@ -1,6 +1,6 @@
 
 // Video
-import v2 from './video.mp4';
+import v2 from './Video.mp4';
 
 // Logo
 import DlLogo from './DlLogo.png'; 
