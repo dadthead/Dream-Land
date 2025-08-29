@@ -55,7 +55,7 @@ const RealEstate = () => {
             initial={{ opacity: 0, y: -50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9 }}
-            src={assets.aboutimg}
+            src={assets.im4}
             alt="Real Estate"
             className="w-full h-full object-cover"
           />
@@ -118,7 +118,7 @@ const RealEstate = () => {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9 }}
-            src={assets.aboutimg}
+            src={assets.im3}
             alt="Real Estate"
             className="w-full h-full object-cover"
           />
@@ -137,7 +137,7 @@ const RealEstate = () => {
             initial={{ opacity: 0, y: -50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9 }}
-            src={assets.aboutimg}
+            src={assets.im2}
             alt="Real Estate"
             className="w-full h-full object-cover"
           />

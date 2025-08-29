@@ -12,14 +12,14 @@ const Carouselimg = () => {
       btn_2: "Learn More",
     },
     {
-      image: assets.apt1,
+      image: assets.im10,
       image2: assets.img1_phone3,
       text: "Modern comfort with timeless design",
       btn_1: "Explore",
       btn_2: "Learn More",
     },
     {
-      image: assets.img2,
+      image: assets.im6,
       image2: assets.img1_phone2,
       text: "Grow Wealth with Red Sandalwood",
       btn_1: "Explore",

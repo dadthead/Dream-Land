@@ -19,7 +19,6 @@ import apt2 from './apt2.jpg';
 import apt3 from './apt3.jpg';
 import apt4 from './apt4.jpg';
 
-import building from './building.jpg';
 import happyclient from './happyclient.jpg';
 import menuimg from './menuimg.png';
 import graph from './Graph-1.png';
@@ -29,6 +28,14 @@ import aboutimg from './aboutimg.jpg';
 import contact from './contact.png';
 
 import redsandalwood from './redsandalwood.png';
+
+import im2 from './im2.png';
+import im3 from './im3.png';
+import im4 from './im4.png';
+import im6 from './image6.png';
+import im8 from './im8.png';
+import im10 from './image10.png';
+
 
 export default {
   
@@ -52,7 +59,7 @@ export default {
     apt3,
     apt4,
 
-    building,
+    
     happyclient,
     menuimg,
     graph,
@@ -61,4 +68,16 @@ export default {
     aboutimg,
     contact,
     redsandalwood,
+<<<<<<< HEAD
 };
+=======
+    
+    im2,
+    im3,
+    im4,
+    im6,
+    im8,
+    im10,
+   
+};
+>>>>>>> 7c74e03 (update)

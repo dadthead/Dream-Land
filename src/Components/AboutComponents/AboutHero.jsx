@@ -7,7 +7,7 @@ const AboutHero = () => {
     <div className="relative w-full h-[60vh] md:h-[90vh] bg-slate-50">
       {/* Background Image */}
       <img
-        src={assets.aboutimg}
+        src={assets.img2}
         className="w-full h-full object-cover"
         alt="About Us"
       />

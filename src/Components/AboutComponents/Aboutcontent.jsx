@@ -12,15 +12,15 @@ const Aboutcontent = () => {
             OUR MISSION
           </h2>
           <p className="text-sm sm:text-inter   text-gray-700">
-           At Dream Land Projects, our mission is to make land ownership a reality for everyone, regardless of their background or financial status. We are committed to building a culture of trust in a world where trust is fading, by offering transparent, reliable, and value-driven ventures that people can depend on.
+           At <span className=" text-[#a01d23]">Dream Land Projects,</span> our mission is to make land ownership a reality for everyone, regardless of their background or financial status. We are committed to building a culture of trust in a world where trust is fading, by offering transparent, reliable, and value-driven ventures that people can depend on.
 
 
           </p>
-          <p className="text-sm sm:text-inter   text-gray-700">Through our services in real estate, farmlands, open plots, and construction, we strive to create not just investments but life-changing opportunities that bring financial freedom, stability, and pride to our clients.</p>
+          <p className="text-sm sm:text-inter   text-gray-700">Through our services in <span className=" text-[#a01d23]"> Real Estate, Farmlands, Open Plots, and Construction, </span> we strive to create not just investments but life-changing opportunities that bring financial freedom, stability, and pride to our clients.</p>
 
-          <p className="text-sm sm:text-inter   text-gray-700">We believe land is more than just property—it is a symbol of security, a source of growth, and a lasting inheritance. That’s why our mission goes beyond sales; we aim to educate and empower people to make the right investments that will benefit their families today and for generations to come.</p>
+          <p className="text-sm sm:text-inter   text-gray-700">We believe land is more than just property—it is a symbol of security, a source of growth, and a <span className="text-[#a01d23]"> Lasting inheritance.</span> That’s why our mission goes beyond sales; we aim to educate and empower people to make the right investments that will benefit their families today and for generations to come.</p>
 
-          <p className="text-sm sm:text-inter   text-gray-700">With over 10,000+ happy clients, our journey is fueled by the dreams of people who trusted us, and our mission will always be to align our dreams with theirs—delivering trust, prosperity, and happiness in every step.</p>
+          <p className="text-sm sm:text-inter   text-gray-700">With over <span className="text-[#a01d23]"> 10,000+ happy clients,</span> our journey is fueled by the dreams of people who trusted us, and our mission will always be to align our dreams with theirs—delivering trust, prosperity, and happiness in every step.</p>
         </div>
 
         {/* Card 2 */}
@@ -29,10 +29,10 @@ const Aboutcontent = () => {
             OUR VISSION
           </h2>
           <p className="text-sm sm:text-inter  text-gray-700">
-            At Dream Land Projects, we believe that every individual deserves the opportunity to live a life of financial freedom built on the foundation of the right and proper investments. To us, this is what we proudly call a Dream Investment—an investment that secures today, nurtures tomorrow, and leaves behind a legacy for generations.
+            At Dream Land Projects, we believe that every individual deserves the opportunity to live a life of <span className=" text-[#a01d23]"> Financial Freedom </span> built on the foundation of the right and proper investments. To us, this is what we proudly call a Dream Investment—an investment that  secures today, nurtures tomorrow, and leaves behind a legacy for generations.
 
           </p>
-          <p className="text-sm sm:text-inter   text-gray-700">We envision a future where land ownership is not a privilege for a few but a right for everyone. Through our carefully designed ventures in open plots, farmlands, and sustainable developments, we aim to create investment channels that are transparent, reliable, and value-driven.</p>
+          <p className="text-sm sm:text-inter   text-gray-700">We envision a future where land ownership is not a privilege for a few but a right for everyone. Through our carefully designed ventures in open plots, farmlands, and sustainable developments, we aim to create investment channels that are <span className=" text-[#a01d23]"> transparent, reliable, and value-driven.</span> </p>
 
           <p className="text-sm sm:text-inter   text-gray-700">
             Our vision is not only to help people acquire land but also to educate them about the true power of land investment—a timeless asset that appreciates, protects, and strengthens families. We dream of a society where every individual can proudly say, <span className="text-[#a01d23]">“I own my piece of land, my legacy, my Dream Land.”</span>
