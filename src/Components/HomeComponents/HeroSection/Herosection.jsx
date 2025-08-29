@@ -6,21 +6,21 @@ const Carouselimg = () => {
   const items = [
     {
       image: assets.img1,
-      image2: assets.img1_phone,
+      image2: assets.img1,
       text: "Find your perfect space to live and grow",
       btn_1: "Explore",
       btn_2: "Learn More",
     },
     {
       image: assets.im10,
-      image2: assets.img1_phone3,
+      image2: assets.im10,
       text: "Modern comfort with timeless design",
       btn_1: "Explore",
       btn_2: "Learn More",
     },
     {
       image: assets.im6,
-      image2: assets.img1_phone2,
+      image2: assets.im6,
       text: "Grow Wealth with Red Sandalwood",
       btn_1: "Explore",
       btn_2: "Learn More",

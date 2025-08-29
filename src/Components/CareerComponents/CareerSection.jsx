@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Building2, Leaf, Users,  Trees } from "lucide-react";
+import assets from "../../assets/assets";
 
 const CareersPage = () => {
   return (
@@ -8,7 +9,7 @@ const CareersPage = () => {
       {/* Hero Section */}
       <div className="relative h-[90vh] flex items-center justify-center overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=2000&q=80"
+          src={assets.clients}
           alt="Dream Land Hero"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -71,7 +72,7 @@ const CareersPage = () => {
       
       <div className="relative h-[50vh] flex items-center justify-center overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=2000&q=80"
+          src={assets.im3}
           alt="Nature & Real Estate"
           className="absolute inset-0 w-full h-full object-cover"
         />

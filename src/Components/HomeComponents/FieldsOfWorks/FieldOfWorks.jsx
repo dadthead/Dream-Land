@@ -40,7 +40,7 @@ const FieldOfWorks = () => {
       {/* Icons Section */}
       <div className="md:flex-row flex-col flex px-2 md:px-10 md:gap-10">
 
-      <div className="grid md:grid-cols-2  grid-cols-4  gap-3 px-2  md:gap-6 mt-14 md:w-[50%]  poppins">
+      <div className="grid md:grid-cols-2  grid-cols-2  gap-3 px-2  md:gap-6 mt-14 md:w-[50%]  poppins">
         {fields.map((field, i) => (
           <Link to={field.path}>
           <motion.div
@@ -50,10 +50,10 @@ const FieldOfWorks = () => {
            transition={{ duration: 0.3, delay: 0.3 + i * 0.1 }}
            key={i} className="flex flex-col items-center gap-2">
             {field.icon}
-            <p className="text-white text-center font-sm text-sm md:text-[12px]">
+            <p className="text-white text-center font-sm text-[10px] md:text-[12px]">
               {field.label}
             </p>
-            <p className="text-white text-center font-sm text-sm md:text-[12px]">
+            <p className="text-white text-center font-sm text-[10px] md:text-[12px]">
               {field.discription}
             </p>
           </motion.div>

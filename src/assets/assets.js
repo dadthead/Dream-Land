@@ -35,6 +35,9 @@ import im4 from './im4.png';
 import im6 from './im6.png';
 import im10 from './10.png';
 
+import gallery from './gallery.jpg';
+import clients from './clients.jpg';
+
 
 export default {
   
@@ -74,6 +77,9 @@ export default {
     im4,
     im6,
     im10,
+
+    gallery,
+    clients,
    
 };
 

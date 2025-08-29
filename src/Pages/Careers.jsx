@@ -5,7 +5,7 @@ const Careers = () => {
   return (
     <div>
     <CareerSection />
-    <CareerDesign />
+    {/* <CareerDesign /> */}
     </div>
     
   )

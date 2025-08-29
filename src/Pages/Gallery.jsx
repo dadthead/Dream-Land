@@ -1,9 +1,12 @@
 import React from 'react'
+import GalleryHero from '../Components/GalleryComponents/GalleryHero'
 
-const Gallery = () => {
+const Gall = () => {
   return (
-    <div>Gallery</div>
+    <div>
+      <GalleryHero/>
+    </div>
   )
 }
 
-export default Gallery
+export default Gall

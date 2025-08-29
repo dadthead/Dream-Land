@@ -20,7 +20,7 @@ const Introduce = React.memo(() => {
   
   
   
-    <div className="absolute top-0 left-0 w-full -z-10 bg-black/80 h-full"></div>
+    <div className="absolute top-0 left-0 w-full -z-10 bg-black/90 h-full"></div>
       <div className="max-w-screen-xl mx-auto z-50">
         <motion.h2 
           initial={{ opacity: 0,  y: 30 }}

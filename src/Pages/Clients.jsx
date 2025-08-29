@@ -1,8 +1,11 @@
 import React from 'react'
+import ClientsHero from '../Components/ClientsComponents/ClientsHero'
 
 const Clients = () => {
   return (
-    <div>Clients</div>
+    <div>
+      <ClientsHero/>
+    </div>
   )
 }
 
