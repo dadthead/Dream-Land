@@ -50,15 +50,15 @@ const Testimonial=React.memo(()=> {
 
   return (
 
-    <section className="bg-white  w-full  text-black py-16 px-6 flex flex-col lg:px-10 items-center  cursor-grab z-50 ">
+    <section className="bg-gradient-to-b from-[#061f03] to-black  w-full  text-white py-16 px-6 flex flex-col lg:px-10 items-center  cursor-grab z-50 ">
       <motion.div
       
       initial={{opacity:0 , x:100}} whileInView={{opacity:1 , x:0}}  viewport={{once:true , amount:0.5}} 
         transition={{duration:1}}
-        className=" relative lg:right-80 md:right-40 right-0 sm:right-20">
+        className=" relative lg:right-87 md:right-40 right-0 sm:right-20">
 
         <p 
-        className="text-[12px] mb-2">Hear from our</p>
+        className="text-[12px] text-orange-400 mb-2 ">Hear from our</p>
         <h2 className="text-xl font-medium mb-2 ">HAPPY CUSTOMERS</h2>
       </motion.div>
 
@@ -90,7 +90,7 @@ const Testimonial=React.memo(()=> {
       </div>
 
       {/* Previous & Next Buttons*/}
-      <div className="flex  gap-3  md:relative md:left-[300px]">
+      <div className="flex  gap-3 mt-2  md:relative md:left-[300px]">
         <button
           onClick={prevSlide}
           className="bg-[#f17c2e] hover:bg-[#f6985a] text-white  p-1  cursor-pointer "

@@ -66,14 +66,14 @@ const Carouselimg = () => {
 
         {/* Text + Buttons */}
         {index === current && ( 
-          <div className="absolute inset-0 top-[60%] sm:top-[40%] md:top-[50%] max-w-3xl inline-block mx-auto">
+          <div className="absolute inset-0 top-[60%] sm:top-[40%] md:top-[60%] max-w-3xl md:right-[43%]  mx-auto">
             {/* Heading */}
             <motion.h2
               key={item.text} 
-              initial={{ opacity: 0, y: 70 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}
-              className="text-slate-200 text-4xl leading-tight w-full sm:text-3xl md:text-6xl font-semibold poppins mb-6 text-center"
+              initial={{ opacity: 0, x: 70 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1 , delay: 0.5 }}
+              className="text-slate-200 text-4xl leading-tight w-full sm:text-3xl md:text-5xl font-semibold poppins mb-6 text-left px-3 md:px-0"
             >
               {item.text}
             </motion.h2>
@@ -81,15 +81,15 @@ const Carouselimg = () => {
             {/* Buttons */}
             <motion.div
               key={item.btn_1 + item.btn_2} 
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1.2 }}
-              className="flex justify-center w-full gap-4 sm:gap-6"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.2, delay: 0.5 }}
+              className="flex justify-start w-full gap-4 sm:gap-6 px-3 md:px-0"
             >
-              <button className="bg-[#ff6600] hover:bg-[#a01d23] text-white px-5 py-2 sm:px-8 sm:py-2 rounded-lg font-semibold shadow-lg transition poppins">
+              <button className="bg-[#e46f21] hover:bg-[#a01d23] text-white px-5 py-2 sm:px-8 sm:py-2 rounded-lg font-medium shadow-lg transition poppins">
                 {item.btn_1}
               </button>
-              <button className="bg-transparent border-2 border-[#ff6600] hover:bg-[#ff6600] hover:text-white text-white px-5 py-2 sm:px-8 sm:py-2 rounded-lg font-semibold shadow-lg transition poppins">
+              <button className="bg-transparent border-1 border-[#e46f21] hover:bg-[#ff6600] hover:text-white text-white px-5 py-2 sm:px-8 sm:py-2 rounded-lg font-medium shadow-lg transition poppins">
                 {item.btn_2}
               </button>
             </motion.div>

@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
@@ -8,7 +7,7 @@ import assets from "../../../assets/assets";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
 
-const FeaturedProjects=React.memo(()=>{
+const FeaturedProjects = React.memo(() => {
     const [topTab, setTopTab] = useState("RealEstate");
     const [subTab, setSubTab] = useState("All");
 
@@ -16,48 +15,43 @@ const FeaturedProjects=React.memo(()=>{
         RealEstate: {
             All: [
                 {
-                    title: "Folium by Sumadhura",
-                    location: "Whitefield, Bengaluru",
-                    config: "Premium 3 & 4 BHK Residences",
-                    possession: "Dec 2025",
-                    rera: "PRM/KA/RERA/1251/446/PR",
+                    title: "Godavari Near Vijayawada - 15km Venture",
+                    location: "Vijayawada, Andhra Pradesh",
+                    config: "350 Plots Sold",
                     image: assets.apt1,
                 },
                 {
-                    title: "Gardens by the Brook",
-                    location: "Shamshabad, Hyderabad",
-                    config: "2, 2.5 & 3 Bed Residences",
-                    possession: "Feb 2028",
-                    rera: "P02400004441",
+                    title: "Royyuru Near Vijyawadda 2006 - 2009 Venture",
+                    location: "Vijayawada, Andhra Pradesh",
+                    config: "300 Plats Sold All",
                     image: assets.apt3,
                 },
                 {
-                    title: "Olympus by Sumadhura",
-                    location: "Nanakramguda, Hyderabad",
-                    config: "Ultra-luxe 2, 2.5, 3 & 3.5 BHK",
-                    possession: "Jan 2027",
-                    rera: "P02400003072",
+                    title: "Hyderabad Near Yadagiri gutta Kolanupaka",
+                    location: "Hyderabad, Telangana",
+                    config: "250 Plots Sold 150",
                     image: assets.apt1,
                 },
-                {
-                    title: "Gardens by the Brook",
-                    location: "Shamshabad, Hyderabad",
-                    config: "2, 2.5 & 3 Bed Residences",
-                    possession: "Feb 2028",
-                    rera: "P02400004441",
-                    image: assets.apt4,
-                },
             ],
-        
         },
         FarmLands: {
             All: [
                 {
-                    title: "Sumadhura Business Park",
-                    location: "ORR, Hyderabad",
-                    config: "Grade A Office Spaces",
-                    possession: "Q4 2026",
-                    rera: "P02400001234",
+                    title: "Dasrshi Praksham District",
+                    location: "Praksham District, Andhra Pradesh",
+                    config: "Red Sandle 2 Farm Lands",
+                    image: assets.apt1,
+                },
+                {
+                    title: "Podhili Mandal - Kesavbatla Village",
+                    location: "Prakasam District, Andhra Pradesh",
+                    config: "Total 30 Acres | 20 Acres Sold",
+                    image: assets.apt1,
+                },
+                {
+                    title: "Nearby Venture - Podhili Mandal",
+                    location: "Prakasam District, Andhra Pradesh",
+                    config: "Total 30 Acres | 10 Acres Sold",
                     image: assets.apt1,
                 },
             ],
@@ -65,24 +59,59 @@ const FeaturedProjects=React.memo(()=>{
         "Open Plots": {
             All: [
                 {
-                    title: "Verdant Enclave",
-                    location: "Sarjapur Road, Bengaluru",
-                    config: "Premium Villa Plots",
-                    possession: "Ready to Register",
-                    rera: "PRM/KA/9988/7766",
+                    title: "Godavaru Near Vijayawada 15km Venture",
+                    location: "Vijayawada, Andhra Pradesh",
+                    config: "350 Plats | Sold All",
                     image: assets.apt2,
+                },
+                {
+                    title: "Chalivedhula Palem - Vijayawada 16km",
+                    location: "Vijayawada, Andhra Pradesh",
+                    config: "200 Plots | All Sold",
+                    image: assets.apt2,
+                },
+                {
+                    title: "Gudlavalleru - Vijayawada 50km",
+                    location: "Vijayawada, Andhra Pradesh",
+                    config: "Venture 3: 300 Plots | All Sold",
+                    image: assets.apt2,
+                },
+                {
+                    title: "Peda Pulipaka (Yanamalakudhuru) - Venture 1",
+                    location: "Vijayawada, Andhra Pradesh",
+                    config: "250 Plots | All Sold",
+                    image: assets.apt1,
+                },
+                {
+                    title: "Peda Pulipaka (Yanamalakudhuru) - Venture 2",
+                    location: "Vijayawada, Andhra Pradesh",
+                    config: "300 Plots | All Sold",
+                    image: assets.apt1,
+                },
+                {
+                    title: "Peda Pulipaka (Yanamalakudhuru) - Venture 3",
+                    location: "Vijayawada, Andhra Pradesh",
+                    config: "200 Plots | All Sold",
+                    image: assets.apt1,
+                },
+                {
+                    title: "Kapilswrapuram Vijaywada 25 Venture",
+                    location: "Vijayawada, Andhra Pradesh",
+                    config: "350 Plats | Sold All",
+                    image: assets.apt1,
+                },
+                {
+                    title: "Thotla Valluru Vijaywada 20Km Venture",
+                    location: "Vijayawada, Andhra Pradesh",
+                    config: "200 Plots | All Sold",
+                    image: assets.apt1,
                 },
             ],
         },
-        "Construction": {
+        Construction: {
             All: [
                 {
-                    title: "LogiHub West",
-                    location: "Bachupally, Hyderabad",
-                    config: "Built-to-suit Warehouses",
-                    possession: "Phase 1 – 2026",
-                    rera: "N/A",
-                    image: assets.apt3,
+                    image: assets.apt1, 
                 },
             ],
         },
@@ -93,53 +122,52 @@ const FeaturedProjects=React.memo(()=>{
     const projects = PROJECTS[topTab][subTab] || [];
 
     return (
-        <div className="w-full h-full bg-gradient-to-b from-black to-green-900   ">
-
-            <section className=" text-white  gap-9 px-4 py-4  md:px-2 lg:px-30">
+        <div className="w-full h-full bg-gradient-to-b from-black to-green-900">
+            <div className="text-white gap-9 px-4 py-4 md:px-2 lg:px-30">
                 <motion.h2
-                
-                 initial={{ opacity: 0,  y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.5 }}
-        transition={{ duration: 0.5, delay: 0.2 }} className="text-lg sm:text-xl md:text-2xl font-semibold mb-6 text-left">
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.5 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                    className="text-lg sm:text-xl md:text-2xl font-semibold mb-6 text-left"
+                >
                     FEATURED PROJECTS
                 </motion.h2>
 
-
-
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:flex gap-2 md:gap-[1px]  mb-6 justify-center ">
+                {/* Top Tabs */}
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:flex gap-2 md:gap-[1px] mb-6 justify-center">
                     {topTabs.map((t) => (
-                        < motion.button
-              initial={{ opacity: 0,  y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.5 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
+                        <motion.button
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, amount: 0.5 }}
+                            transition={{ duration: 0.5, delay: 0.2 }}
                             key={t}
                             onClick={() => {
                                 setTopTab(t);
                                 setSubTab(Object.keys(PROJECTS[t])[0]);
                             }}
                             className={`px-4 py-2 cursor-pointer md:px-10 lg:px-26 transition text-xs sm:text-sm md:text-base lg:text-[12px] text-center border border-orange-500 
-                            ${topTab === t
-                                    ? "bg-slate-300 text-green-900 "
-                                    : "bg-white text-[#a01d23] "}`} >
+                ${topTab === t
+                                    ? "bg-slate-300 text-green-900"
+                                    : "bg-white text-[#a01d23]"
+                                }`}
+                        >
                             {t}
                         </motion.button>
                     ))}
                 </div>
 
-
-
                 {/* Sub Tabs + Navigation */}
-                <div className="flex flex-wrap justify-between items-center border-b  border-white mb-3 ">
+                <div className="flex flex-wrap justify-between items-center border-b border-white mb-3">
                     <div className="flex gap-6 flex-wrap">
                         {subTabs.map((s) => (
                             <button
                                 key={s}
                                 onClick={() => setSubTab(s)}
                                 className={`py-2 relative text-md md:text-base mb-2 ${subTab === s
-                                    ? "text-white font-semibold"
-                                    : "text-white hover:text-orange-400"
+                                        ? "text-white font-semibold"
+                                        : "text-white hover:text-orange-400"
                                     }`}
                             >
                                 {s}
@@ -148,7 +176,6 @@ const FeaturedProjects=React.memo(()=>{
                                 )}
                             </button>
                         ))}
-
                     </div>
 
                     <div className="flex gap-1 mt-3 md:mt-0">
@@ -159,11 +186,10 @@ const FeaturedProjects=React.memo(()=>{
                             <ChevronRight size={20} />
                         </div>
                     </div>
-
-
                 </div>
 
-                <Swiper 
+                {/* Slider */}
+                <Swiper
                     modules={[Navigation]}
                     navigation={{
                         nextEl: ".custom-next",
@@ -174,51 +200,54 @@ const FeaturedProjects=React.memo(()=>{
                     spaceBetween={30}
                     breakpoints={{
                         768: { slidesPerView: 2 },
-                        1024: {
-                            slidesPerView: 3
-
-                        },
+                        1024: { slidesPerView: 3 },
                     }}
                     className="pb-10"
                 >
-
-
                     {projects.map((p, i) => (
                         <SwiperSlide key={i}>
-                            <div className="bg-slate-100 rounded-t-full  overflow-hidden rounded-md transition flex flex-col h-full border-1">
+                            {p.title ? (
+                                // Normal card
+                                <div className="bg-slate-100 overflow-hidden transition flex flex-col h-full border-1">
+                                    <div className="w-full h-100 overflow-hidden px-3 py-3">
+                                        <img
+                                            src={p.image}
+                                            alt={p.title}
+                                            className="w-full h-full object-cover"
+                                            loading="lazy"
+                                        />
+                                    </div>
+                                    <div className="p-4 flex flex-col flex-grow space-y-3">
+                                        <h3 className="text-[12px] text-black">{p.title}</h3>
+                                        <p className="text-black text-[12px]">{p.location}</p>
+                                        <p className="text-[12px] text-black">{p.config}</p>
+                                        <button className="mt-3 w-50 bg-orange-400 text-white text-[12px] px-2 py-2 cursor-pointer hover:bg-[#ff6600] transition">
+                                            View Details →
+                                        </button>
+                                    </div>
+                                </div>
+                            ) : (
 
-                                {/* Fixed height image wrapper */}
-                                <div className="w-full  h-100 overflow-hidden px-3 py-3 rounded-md ">
+                                // Construction Banner
+                                <div className="w-screen">
                                     <img
                                         src={p.image}
-                                        alt={p.title}
-                                        className="w-full h-full  object-cover rounded-t-full"
-                                        loading="lazy"
+                                        alt="img"
+                                        className="w-screen h-[700px] object-cover  shadow-xl"
                                     />
                                 </div>
 
-                                <div className="p-4 flex flex-col flex-grow">
-                                    <h3 className="text-lg text-black font-semibold">{p.title}</h3>
-                                    <p className="text-black">{p.location}</p>
-                                    <p className="text-sm mt-2 text-slate-600">{p.config}</p>
-                                    <p className="text-sm text-slate-600">Possession: {p.possession}</p>
-                                    <p className="text-xs text-slate-400">RERA: {p.rera}</p>
-                                    <button className="mt-3 w-40 bg-orange-400 text-white px-4 py-2 cursor-pointer  hover:bg-[#ff6600] transition">
-                                        View Details →
-                                    </button>
-                                </div>
-                            </div>
+                            )}
                         </SwiperSlide>
                     ))}
-
                 </Swiper>
-                {projects.length > 0 ? null : (
+
+                {projects.length === 0 && (
                     <p className="text-center text-gray-500">No projects available.</p>
                 )}
-
-            </section>
+            </div>
         </div>
     );
-})
+});
 
-export default FeaturedProjects
+export default FeaturedProjects;

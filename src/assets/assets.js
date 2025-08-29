@@ -32,9 +32,8 @@ import redsandalwood from './redsandalwood.png';
 import im2 from './im2.png';
 import im3 from './im3.png';
 import im4 from './im4.png';
-import im6 from './image6.png';
-import im8 from './im8.png';
-import im10 from './image10.png';
+import im6 from './im6.png';
+import im10 from './10.png';
 
 
 export default {
@@ -74,7 +73,6 @@ export default {
     im3,
     im4,
     im6,
-    im8,
     im10,
    
 };
