@@ -68,9 +68,7 @@ export default {
     aboutimg,
     contact,
     redsandalwood,
-<<<<<<< HEAD
-};
-=======
+
     
     im2,
     im3,
@@ -80,4 +78,4 @@ export default {
     im10,
    
 };
->>>>>>> 7c74e03 (update)
+

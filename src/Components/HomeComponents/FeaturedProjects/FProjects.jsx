@@ -48,16 +48,7 @@ const FeaturedProjects=React.memo(()=>{
                     image: assets.apt4,
                 },
             ],
-            // Villas: [
-            //     {
-            //         title: "Pebble County",
-            //         location: "Devanahalli, Bengaluru",
-            //         config: "4 & 5 BHK Villas",
-            //         possession: "Mar 2027",
-            //         rera: "PRM/KA/1234/5678",
-            //         image: assets.apt1,
-            //     },
-            // ],
+        
         },
         FarmLands: {
             All: [
